@@ -1,0 +1,24 @@
+algoritmo "escala"
+// Função : usar um vetor de 10 posições de inteiros e exibir somente os valores
+// das posições que contenham numeros ímpares
+// data 21/09/2021
+var
+escala: vetor[0..9] de inteiro
+num, qtde: inteiro
+inicio
+
+para num de 0 ate 9 faca
+     escreval ("digite o", num+1, "número")
+     leia (escala[num])
+fimpara
+
+limpatela
+escreval ("numeros ímpares cadastrados")
+para num de 0 ate 9 faca
+     se (escala[num] mod 2 <> 0)entao
+        qtde <- qtde +1
+        escreval (num+1, " número impar:", escala[num])
+     fimse
+fimpara
+escreval ("Achei ", qtde, "numeros ímpares")
+fimalgoritmo
