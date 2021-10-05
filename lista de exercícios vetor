@@ -19,3 +19,126 @@ para x de 1 ate 5 faca
     escreva (vet[x], "")
 fimpara
 fimalgoritmo
+
+
+
+
+
+algoritmo "MEDIA NOTAS"
+// Função : Dar 3 notas para 5 alunos e imprimir
+// Autor :
+// Data : 05/10/2021
+// Seção de Declarações 
+var
+nome: vetor [1..5] de caractere
+n1: vetor[1..5] de real
+n2: vetor[1..5] de real
+n3: vetor[1..5] de real
+media:vetor[1..5] de real
+i, total: inteiro
+somamedia, mediatotal: real
+inicio
+para i de 1 ate 5 faca
+
+        escreva ("digite o nome", i, "o aluno")
+        leia (nome[i])
+        escreval ("digite a primeira nota  da", nome[i], ":")
+        leia (n1[i])
+        escreval ("digite a segunda nota  da", nome[i], ":")
+        leia (n2[i])
+        escreval ("digite a terceira nota  da", nome[i], ":")
+        leia (n3[i])
+     media[i] <- (n1[i] + n2[i] + n3[i])/3
+     somamedia <- somamedia + media[i]
+     limpatela
+fimpara
+mediatotal <- sonamedia/2
+limpatela
+escreval ("LISTAGEM DOS ALUNOS")
+escreval ("--------------------------")
+
+para i <- 1 ate 5 faca
+     escreval (nome[i]:20 "Média", media[i])
+     se (media[i] > media total) entao
+        total <- total+1
+     fimse
+fimpara
+        escreval ("Temos ", total, "alunos acima da média da turma que é: ",
+        mediatotal )
+fimalgoritmo
+
+
+
+
+
+algoritmo "vetordesfile"
+// Função :
+// Autor :
+// Data : 05/10/2021
+// Seção de Declarações 
+var
+modelo: vetor[1..6] de inteiro
+porcentagem: vetor[1..6] de real
+cont: inteiro
+i:inteiro
+
+inicio
+cont <-1
+repita
+      limpatela
+      
+      escreval("Votação jurado", cont, "sua modelo escolhida é: ")
+      
+      escreval("Modelo Rafaela - digite 1")
+      escreval("Modelo Carla -  digite 2")
+      escreval("Modelo Bruna - digite 3")
+      escreval("Modeo Thalita - digite 4")
+      escreval("Modelo Esther - digite 5")
+      escreval("Modelo Jéssica - digite 6")
+      leia (i)
+      
+      enquanto (i<1) ou (i>6) faca
+               escreval("Digite uma modelo valida. Escolhaos valores ")
+               escreval("1, 2, 3, 4, 5, 6:")
+      fimenquanto
+      modelo[i]<- modelo[i] + 1
+      porcentagem[i] <- (modelo[i]/10) * 100
+      cont <- cont + 1
+ate (cont>10)
+limpatela
+para i de 1 ate 6 faca
+     escreval("A modelo", i "tem", porcentagem[i, "% dos votos")
+fimalgoritmo
+
+
+
+
+
+algoritmo "revisão"
+// Função :
+// Autor :
+// Data : 05/10/2021
+// Seção de Declarações 
+var
+vet: vetor[1.10] de inteiro
+x, y, troca: inteiro
+inicio
+para x de 1 ate 10 faca
+     vet[x]<- randi (100) + 1
+     escreval (vet[]x)
+fimpara
+
+para x de 1 ATE 9 faca
+     para y de x+1 ate 10 faca
+     se (vet[x] > vet[y] ) entao
+        troca <- vet[x]
+           vet[x] <- vet[y]
+            vet[y] <- troca
+     fimse
+     fimpara
+fimpara
+ escreval("****VETOR ORDENADO****")
+ para R de 1 ATE 10  faca
+      escreval ( vet [x])
+ fimpara
+fimalgoritmo
