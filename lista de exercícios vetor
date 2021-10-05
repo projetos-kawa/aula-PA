@@ -142,3 +142,33 @@ fimpara
       escreval ( vet [x])
  fimpara
 fimalgoritmo
+
+
+
+
+algoritmo "pares e impares"
+// Função :
+// Autor :
+// Data : 05/10/2021
+// Seção de Declarações 
+var
+vet: vetor [1..10] de inteiro
+impar, par: inteiro
+ x, y: inteiro
+inicio
+para x de 1 ATE 10 faca
+     escreval ("digite 10 numeros")
+     leia (vet[x])
+fimpara
+
+para x de 1 ATE 10 faca
+     para y de 1 ATE 10 faca
+     se(impar[x] - par[y])entao
+     impar <- impar+1
+     fimse
+fimpara
+para x de 1 ATE 10 faca
+escreval ("impares", x, ":", impares[x])
+escreval ("pares", y, ":", pares[x])
+
+fimalgoritmo
